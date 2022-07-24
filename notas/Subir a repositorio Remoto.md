@@ -13,3 +13,17 @@ $ git pull origin master --allow-unrelated-histories
 
 -- 4 Ahora sí podemos hacer git push para guardar los cambios de nuestro repositorio local y en repositorio remoto
 $ git push origin master
+
+
+##Notas SSH
+*** Crear llave ssh con rsa o con ed25519
+ssh-keygen -t rsa -b 4096 -C "email@example.com"
+ssh-keygen -t ed25519 -C "email@example.com"
+
+**Para agregar llave ssh
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
+**cambiar passphrase de la llave ssh, para removerla se usa lo mismo pero se "cambia" a una contraseña vacia
+ssh-keygen -p 
+
