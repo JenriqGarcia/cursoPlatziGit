@@ -27,3 +27,34 @@ ssh-add ~/.ssh/id_rsa
 **cambiar passphrase de la llave ssh, para removerla se usa lo mismo pero se "cambia" a una contraseña vacia
 ssh-keygen -p 
 
+
+##Notas LOG
+git log
+
+**arbol de ramas
+git log --all --graph --decorate --oneline
+
+**crear alias de git
+git config alias.arbolito "log --all --graph --decorate --oneline"
+
+**commits por persona
+git shortlog
+
+**quien modifico las lineas de codigo indecadas
+git blame nombre-archivo.txt -L35,50 -c         //muestra de la linea 35 a la 50 del archivo nombre-archivo.txt 
+
+##Notas generales
+**Borrar archivos no deseados
+git clean --dry-run        //Te dise cuales se van a borrar
+
+git clean -f            //ejecutar el borrado
+
+
+##Buscar entre archivos
+git grep -n busqueda                 // -n nos dice en que linea
+git grep -c busqueda                 // -c nos dice cuantas veces aparece
+
+##Ramas
+git branch          //ver ramas locales
+git branch -r        //ver ramas remotas
+git branch -a         //ver todas ramas
